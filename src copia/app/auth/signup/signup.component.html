@@ -1,0 +1,72 @@
+
+    <form class="row g-3 needs-validation rounded" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <h3><span class="s">S</span>ignup</h3>
+      <!-- name -->
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Name</label>
+        <input type="text" class="form-control" id="nome" name="name" ngModel #name="ngModel" required maxlength="10" minlength="3" placeholder="insert name">
+
+        <!-- gestione errori -->
+
+        <div *ngIf="!name.valid && name.touched">
+          <!--uso la template variabvle #name, per recuperare i possibili errori di validazione -->
+          Invalid name <!-- errore generale -->
+        <div *ngIf="name.errors!['minlength']"> <!-- errori specifici -->
+          Name is Too Short
+        </div>
+
+        <div *ngIf="name.errors!['maxlength']"> <!-- errori specifici -->
+          Name is Too Long
+        </div>
+
+        </div>
+
+      </div>
+
+    <!-- email -->
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" ngModel #email="ngModel" required placeholder="insert email">
+
+        <!-- gestione errori -->
+
+        <div *ngIf="!email.valid && email.touched">
+          <!--uso la template variabvle #name, per recuperare i possibili errori di validazione -->
+          Invalid email <!-- errore generale -->
+        </div>
+
+      </div>
+
+
+      <!-- password -->
+      <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" ngModel #password="ngModel" minlength="6" required placeholder="insert password">
+
+        <!-- gestione errori -->
+
+        <div *ngIf="!password.valid && password.touched">
+          <!--uso la template variabvle #name, per recuperare i possibili errori di validazione -->
+          Invalid password <!-- errore generale -->
+          <p *ngIf="password.errors!['minlength']"> password must be at least 6 characters! </p>
+        </div>
+
+      </div>
+
+
+      <!-- age -->
+      <div class="col-md-6">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" class="form-control" id="age" name="age" ngModel #age="ngModel" required  max="85" placeholder="insert age">
+
+        <!-- gestione errori -->
+
+        <div *ngIf="!age.valid && age.touched">
+          insert a valid age buddy
+        </div>
+      </div>
+
+      <button type="submit" class="btn  ms-2 mt-4"  [disabled]="!f.valid||disabled" submit-btn >Signup</button>
+
+    </form>
+

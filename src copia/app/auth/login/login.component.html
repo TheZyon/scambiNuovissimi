@@ -1,0 +1,35 @@
+
+    <form class="row g-3 needs-validation rounded" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <h3><span class="l">L</span>ogin</h3>
+
+    <!-- email -->
+      <div class="col-md-6">
+        <label for="nome" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" ngModel #email="ngModel" required>
+
+        <!-- gestione errori -->
+
+        <div *ngIf="!email.valid && email.touched">
+          <!--uso la template variabvle #name, per recuperare i possibili errori di validazione -->
+          Invalid email <!-- errore generale -->
+        </div>
+
+      </div>
+
+
+    <!-- password -->
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" ngModel #password="ngModel" required>
+
+      <!-- gestione errori -->
+
+      <div *ngIf="!password.valid && password.touched">
+        <!--uso la template variabvle #name, per recuperare i possibili errori di validazione -->
+        Invalid password <!-- errore generale -->
+      </div>
+
+    </div>
+      <button type="submit" class="btn ms-2 mt-4"  [disabled]="!f.valid||disabled" submit-btn >Login</button>
+    </form>
+

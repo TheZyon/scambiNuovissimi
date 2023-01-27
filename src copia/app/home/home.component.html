@@ -1,0 +1,21 @@
+
+
+<div class="container d-flex flex-column align-items-center justify-content-center">
+
+  <h2 class="title_boxes p-4">People you <i class="me-1">should </i> know</h2>
+
+  <div class="row">
+
+    <div class="col col-12 col-md-6 col-lg-6 p-3" *ngFor="let user of iUsersArray; index as i">
+      <div class="d-flex align-items-center shadow-lg p-3 mb-5 bg-body-tertiary rounded boxes">
+        <a routerLink="/posts/{{user.id}}"><img src="../../assets/CoupleWithDog2.jpeg" alt="user-img" class="user-img"></a>
+        <div class="grid row ps-3">
+        <p class="zyon">Zyon <span>suggests:</span></p>
+        <p class="me-auto">{{user.name}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+//saponetta
+/* fonts:
+font-family: 'Dosis', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Lobster'; */
+input{
+    width: 300px;
+}
+form{
+    width: 880px;
+}
+.btn{
+    background:  rgb(223, 13, 128);
+    color: white;
+}
+label, .btn{
+    font-family: 'Dosis', sans-serif;
+}
+#body{
+    height: 100px;
+}
+#body, #title{
+    width: 500px;
+}

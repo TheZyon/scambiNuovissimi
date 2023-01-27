@@ -1,0 +1,56 @@
+#body{
+  *{
+  display: flex;
+  justify-content: center;}
+  height:1000px;
+ // background-image: url("../assets/loveSfondo.jpg");
+ // background-size: cover ;
+}
+
+.heart{
+  transform: scale(0.2);
+  position: absolute;
+  animation: heart 3s infinite;
+}
+
+
+
+@keyframes heart {
+
+  0%{transform: translateY(0), scale(0.2)}
+  50%{transform: translateY(-50px), scale(0.5) ; opacity: 0;}
+
+}
+//saponetta
+/*font-family: 'Dosis', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Lobster', cursive;*/
+p{
+  font-family: 'Fjalla One', sans-serif;
+}
+.header_pic{
+  width: 500px;
+}
+.welcome{
+  font-size: 95px;
+  font-family: 'Lobster';
+  color: rgb(223, 13, 128);
+}
+.zyon{
+  font-size: 30px;
+  font-family: 'Lobster';
+  color: rgb(223, 13, 128);
+}
+.dates{
+  font-size: 25px;
+  font-family: 'Fjalla One', sans-serif;
+}
+.description{
+  font-size: 25px;
+  margin-top: 20px;
+}
+.loving{
+  font-family: 'Lobster';
+  color: rgb(223, 13, 128);
+  font-size: 30px;
+}

@@ -1,0 +1,24 @@
+//s
+.l{
+    font-family: 'Lobster';
+    color:  rgb(223, 13, 128);
+    font-size: 32px;
+    padding-right: 4px;
+}
+label, .btn{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+.btn{
+    background-color: rgba(223, 13, 129, 0.947);
+    color: white;
+    width: 100px;
+    &:hover {
+      background-color: rgba(223, 13, 129, 0.7);
+    }
+  }
+  form{
+    width: 1000px;
+    padding: 50px;
+    box-shadow: 2px 2px 35px 5px rgba(223, 13, 129, 0.276);
+}

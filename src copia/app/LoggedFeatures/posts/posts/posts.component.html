@@ -1,0 +1,68 @@
+
+<!-- questa pagina è la bakeka dell'utente -->
+<!--
+<div>
+
+  <p>id {{user?.info?.id}}</p>
+  <p>name {{user?.info?.name}}</p>
+  <p>email {{user?.info?.email}}</p>
+  <p>age {{user?.info?.age}}</p>
+</div> -->
+
+
+
+
+<div class="container d-flex">
+
+<div id="user-friends"> <!-- contiene anteprima amici dell'utente -->
+<!--
+metterci una tabella in cui si mostrano 3x3 foto circolari con nome sotto
+che rappresentano amici della persona
+-->
+</div>
+
+
+<div id="user-posts"> <!-- contiene i posts dell'utente -->
+
+<div class="container">
+  <h3 class="hello">Hello</h3>
+<div class="d-flex align-items-end"> <!-- immagine utente -->
+  <img src="../../../../assets/laCavalliQuellaVera.jpeg" class="img_utente" alt="img_utente">
+  <p class="ps-4 fs-2">{{user?.name}}</p>
+
+
+</div>
+</div>
+
+<!-- form per crear nuovi post -->
+<div class="grid row align-items-center main_div">
+<h2 class="col-6 postsmth">Post something</h2>
+<img class="col-6" src="../../../../assets/date4.jpeg" alt="img-cover" width="350px">
+</div>
+<div *ngIf="selectedUserIsLoggedUser">
+<app-post-form (onCreate)="createPost($event)">
+
+</app-post-form>
+</div>
+
+
+<!-- post creati in passato -->
+<div class="border border-secondary">
+
+<app-post [yours]="selectedUserIsLoggedUser" [title]="post.title" [body]="post.body" (onDelete)="deletePostById(post.id)" (onUpdate)="updatePost($event, i)" *ngFor="let post of postArrayUser; index as i">
+
+  <p title>{{post.title}}</p>
+  <p body>{{post.body}}</p>
+  <p author>{{user?.name}}</p>
+
+</app-post>
+
+</div>
+</div>
+
+
+
+</div>
+
+
+

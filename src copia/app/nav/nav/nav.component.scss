@@ -1,0 +1,44 @@
+a{
+  transition: 1s;
+  color:white;
+  &:hover{
+    color:#690d1fb9;
+  }
+}
+
+nav{
+  padding:1rem;
+  background:  rgb(223, 13, 128);
+  background: linear-gradient(90deg,  rgb(223, 13, 128, 1) 27%, rgba(222,77,60,1) 60%,  rgba(222,77,60,1) 94%);
+
+}
+
+.attivo{
+margin-left:1rem;
+margin-right: 1rem;
+transform: scale(1.4);
+}
+
+//saponetta
+/* fonts:
+font-family: 'Dosis', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Lobster'; */
+
+.logo_brand{
+  width: 60px;
+}
+.zyon{
+  font-family: 'Lobster';
+  font-size: 35px;
+}
+.dates{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 20px;
+  margin-left: -4px;
+  color: rgba(56, 56, 56, 0.467);
+}
+a{
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+}

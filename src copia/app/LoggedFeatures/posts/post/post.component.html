@@ -1,0 +1,26 @@
+<div class="border border-primary my-4">
+
+<div *ngIf="status">
+<div class="d-flex">
+<img src="../../../../assets/images.jpeg" alt="img_utente">
+<p><ng-content select="[author]"></ng-content></p>
+</div>
+
+<h3><ng-content select="[title]"></ng-content></h3>
+<p><ng-content select="[body]"></ng-content></p>
+
+
+<button *ngIf="yours" (click)="toggle()" class="btn btn-secondary">Edit</button>
+<button *ngIf="yours" (click)="deletePost()" class="btn btn-secondary">Delete</button>
+<button class="btn btn-secondary">Like</button>
+<button class="btn btn-secondary">Comment</button>
+<!-- mettere anche like btn e altre calls to action -->
+</div>
+
+<div *ngIf="!status">
+<app-post-form [titl]="title" [bod]="body" (onCreate)="updatePost($event)"></app-post-form>
+<button  (click)="toggle()">Annulla</button>
+</div>
+
+
+</div>

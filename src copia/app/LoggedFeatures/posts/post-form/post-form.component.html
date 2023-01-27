@@ -1,0 +1,33 @@
+
+
+
+
+
+
+
+
+<form #f="ngForm"  (ngSubmit)="postManager(f)" class="shadow p-3 mb-5 bg-body rounded">
+
+
+
+
+  <div class="col-md-4">
+    <label for="nome" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" name="title" [(ngModel)]="titl" #title="ngModel" required>
+
+    <!-- gestione errori -->
+
+<!--     <div *ngIf="!title.valid && title.touched">
+      By the gods, give it a title!
+          </div> -->
+
+  </div>
+
+  <div class="col-md-4 pt-3">
+    <label for="nome" class="form-label">Body</label>
+    <input type="text" class="form-control" id="body" name="body" [(ngModel)]="bod" #body="ngModel" required>
+  </div>
+
+  <button type="submit" class="btn mt-3" [disabled]="!f.valid">Publish</button>
+
+</form>
